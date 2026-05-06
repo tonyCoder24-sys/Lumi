@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUMINAL — My Portfolio</title>
+  <meta name="description" content="Award-winning creative editor & content creator. Cinematic storytelling, premium visuals, and unforgettable content." />
+  <meta name="keywords" content="creative editor, content creator, video editor, portfolio" />
+  <meta property="og:title" content="LUMINAL — My Portfolio" />
+  <meta property="og:description" content="Award-winning creative editor & content creator." />
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-logo">LUMINAL</span>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-trail" aria-hidden="true"></div>
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Home">LUMINAL</a>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#about"       class="nav-link">About</a></li>
+        <li><a href="#portfolio"   class="nav-link">Portfolio</a></li>
+        <li><a href="#services"    class="nav-link">Services</a></li>
+        <li><a href="#testimonials"class="nav-link">Reviews</a></li>
+        <li><a href="#contact"     class="nav-link nav-cta">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="hero" aria-label="Hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-orb orb-1"></div>
+        <div class="hero-orb orb-2"></div>
+        <div class="hero-orb orb-3"></div>
+        <canvas id="particle-canvas"></canvas>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-avatar reveal-up" aria-label="Profile image">
+          <div class="avatar-placeholder">
+            <img src="Image (79).png" alt="Antonio Martin" loading="lazy">
+          </div>
+          <div class="avatar-ring" aria-hidden="true"></div>
+        </div>
+
+        <p class="hero-eyebrow reveal-up delay-1">Creative Editor &amp; Content Strategist</p>
+
+        <h1 class="hero-title reveal-up delay-2">
+          Make Edits<br/>
+          <em>Worth Watching</em>
+        </h1>
+
+        <p class="hero-subtitle reveal-up delay-3">
+          I turn raw footage and ideas into cinematic experiences<br class="br-desktop"/>
+          that captivate, convert, and leave audiences wanting more.
+        </p>
+
+        <div class="hero-ctas reveal-up delay-4">
+          <a href="#portfolio" class="btn btn-gold">View My Work</a>
+          <a href="#contact"   class="btn btn-ghost">Let's Collaborate</a>
+        </div>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <section id="about" aria-label="About">
+      <div class="container">
+        <div class="section-label reveal-up">01 / About</div>
+
+        <div class="about-grid">
+          <div class="about-image reveal-left">
+            <div class="about-photo-placeholder">
+              <img src="4352310.png" alt="Antonio Martin" loading="lazy">
+            </div>
+            <div class="about-glow" aria-hidden="true"></div>
+          </div>
+
+          <div class="about-text reveal-right">
+            <h2 class="section-title">Antonio Martin - TxnZee</h2>
+            <p class="about-role">Senior Creative Editor &amp; Visual Storyteller</p>
+
+            <p class="about-bio">
+              I’m a 19 year old editor who’s been editing for around 5 years now. I originally started just messing around with clips and effects for fun, but over time it turned into something I genuinely enjoy and take seriously.
+            </p>
+            <p class="about-bio">
+              Most of my work is focused on cinematic edits, smooth motion, pacing, and creating visuals that actually feel clean and memorable. I like experimenting with different styles and finding ways to make edits feel more immersive instead of overdone.
+            </p>
+            <p class="about-bio">
+              Over the years I’ve worked with different creators and online communities on edits, short-form content, and visual projects. Working with different styles and ideas helped me improve a lot creatively and taught me how to adapt my editing to match different visions while still keeping my own style.
+            </p>
+
+            <div class="skills-grid">
+              <div class="skill-tag">Video Editing</div>
+              <div class="skill-tag">Color Grading</div>
+              <div class="skill-tag">Motion Graphics</div>
+              <div class="skill-tag">Short-Form Content</div>
+              <div class="skill-tag">YouTube Production</div>
+              <div class="skill-tag">Brand Strategy</div>
+              <div class="skill-tag">Sound Design</div>
+              <div class="skill-tag">VFX Compositing</div>
+            </div>
+
+            <div class="about-socials">
+              <a href="https://www.instagram.com/txnzee.amv?igsh=MWt4YnRqMmdcnBdA==" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                Instagram
+              </a>
+              <a href="https://www.tiktok.com/@txnzee?_r=1&_t=ZS-967GZugouUW" class="social-link" aria-label="TikTok" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.24 8.24 0 004.82 1.55V6.79a4.85 4.85 0 01-1.05-.1z"/></svg>
+                TikTok
+              </a>
+              <a href="https://www.youtube.com/channel/UCj78QEDv6ELGu_WoY1_MMHw" class="social-link" aria-label="YouTube" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7s-.3-2-1.2-2.8c-1.1-1.2-2.4-1.2-3-1.3C16.2 2.8 12 2.8 12 2.8s-4.2 0-6.8.1c-.6.1-1.9.1-3 1.3C1.3 5 1 7 1 7S.7 9.2.7 11.5v2.1C.7 16 1 18 1 18s.3 2 1.2 2.8c1.1 1.2 2.6 1.1 3.3 1.2C7.6 22.1 12 22.1 12 22.1s4.2 0 6.8-.2c.6-.1 1.9-.1 3-1.2.9-.8 1.2-2.8 1.2-2.8s.3-2.2.3-4.4v-2.1C23.3 9.2 23 7 23 7zm-13.8 8.9V8.1l8.1 3.9-8.1 3.9z"/></svg>
+                YouTube
+              </a>
+              <a href="#" class="social-link" aria-label="Discord" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.5 19.5 0 0015.2 3c-.2.4-.5.9-.7 1.3a18 18 0 00-5 0A13.3 13.3 0 008.8 3 19.6 19.6 0 003.6 4.4C.5 9.1-.3 13.6.1 18a19.7 19.7 0 005.9 3 14 14 0 001.2-2 12.7 12.7 0 01-1.9-.9l.5-.4a14.1 14.1 0 0012.4 0l.5.4c-.6.4-1.2.6-1.9.9.3.7.8 1.4 1.2 2a19.6 19.6 0 005.9-3c.5-5.1-.8-9.5-3.5-13.6zM8.1 15.2c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3c1.1 0 2 1 2 2.3 0 1.3-.9 2.3-2 2.3zm7.8 0c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3c1.1 0 2 1 2 2.3 0 1.3-.9 2.3-2 2.3z"/></svg>
+                Discord
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" aria-label="Portfolio">
+      <div class="container">
+        <div class="section-label reveal-up">02 / Portfolio</div>
+        <h2 class="section-title centered reveal-up">Selected Work</h2>
+        <p class="section-subtitle reveal-up">Click any project to view my work</p>
+        
+        <div class="portfolio-grid" id="portfolio-grid">
+          <article class="portfolio-card reveal-up" data-category="cinematic"
+            data-title="Monster Edit"
+            data-description="Replace this with a description of the project."
+            data-tags="Cinematic · Color Grading · VFX"
+            data-link="#">
+            <div class="card-thumb video-thumb">
+              <iframe src="https://www.youtube.com/embed/8461ycwcBQo" title="YouTube video player" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Monster Edit [mmv/edit]</h3>
+              <p class="card-tags">Song - Not So Bad</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal-up delay-1" data-category="shortform"
+            data-title="Vinland Saga Edit"
+            data-description="Replace this with a description of the project."
+            data-tags="Short-Form · Reels · TikTok"
+            data-link="#">
+            <div class="card-thumb video-thumb">
+              <iframe src="https://www.youtube.com/embed/4dNtAsgAwTM" title="YouTube video player" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Happy Birthday Edit - Vinland saga [mmv/edit]</h3>
+              <p class="card-tags">Song - Golden Brown</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal-up delay-2" data-category="commercial"
+            data-title="Maki Edit"
+            data-description="Replace this with a description of the project."
+            data-tags="Commercial · Brand · Motion"
+            data-link="#">
+            <div class="card-thumb video-thumb">
+              <iframe src="https://www.youtube.com/embed/QR772vJO4y4" title="YouTube video player" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Maki Edit | Montagem Perigosa [amv/edit]</h3>
+              <p class="card-tags">Song - Montagem Perigosa</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal-up" data-category="music"
+            data-title="The AOT Story"
+            data-description="Replace this with a description of the project."
+            data-tags="Music Video · Visual Effects · Narrative"
+            data-link="#">
+            <div class="card-thumb video-thumb">
+              <iframe src="https://www.youtube.com/embed/genNL95Nivg" title="YouTube video player" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">The AOT Story</h3>
+              <p class="card-tags">Song - Endless Storm</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal-up delay-1" data-category="cinematic"
+            data-title="Flow Edit"
+            data-description="Replace this with a description of the project."
+            data-tags="Cinematic · Narrative · Documentary"
+            data-link="#">
+            <div class="card-thumb video-thumb">
+              <iframe src="https://www.youtube.com/embed/8HneWAKTp60" title="YouTube video player" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">CAN'T STOP ME🗣️🔥 [Flow/edit]</h3>
+              <p class="card-tags">Song - CAN'T STOP ME (commission)</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal-up delay-2" data-category="shortform"
+            data-title="CSM Edit"
+            data-description="Replace this with a description of the project."
+            data-tags="Short-Form · Viral · YouTube Shorts"
+            data-link="#">
+            <div class="card-thumb video-thumb">
+              <iframe src="https://www.youtube.com/embed/hIZaZB5810o" title="YouTube video player" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">CSM [Amv/edit]</h3>
+              <p class="card-tags">Song - Montagem Yueshi</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" aria-label="Services">
+      <div class="container">
+        <div class="section-label reveal-up">03 / Services</div>
+        <h2 class="section-title centered reveal-up">What I Offer</h2>
+
+        <div class="services-grid">
+          <div class="service-card reveal-up">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M9 8l3 2 3-2"/></svg>
+            </div>
+            <h3 class="service-title">Long-Form Video Editing</h3>
+            <p class="service-desc">Full YouTube videos, documentaries, and branded content. Story-first editing that keeps viewers watching from start to finish.</p>
+            <div class="service-price">
+              <span class="price-label">Starting at</span>
+              <span class="price-value">$80-200</span>
+            </div>
+            <ul class="service-features">
+              <li>Up to 8-10 minutes</li>
+              <li>Color grading included</li>
+              <li>1-2 rounds of revisions</li>
+              <li>Delivery in 3-5 days</li>
+            </ul>
+          </div>
+
+          <div class="service-card featured reveal-up delay-1">
+            <div class="service-badge">Most Popular</div>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3 class="service-title">Full Content Package</h3>
+            <p class="service-desc">End-to-end production management. Strategy, scripting, editing, thumbnail design, and posting schedule — all handled for you.</p>
+            <div class="service-price">
+              <span class="price-label">Starting at</span>
+              <span class="price-value">$400-900</span>
+            </div>
+            <ul class="service-features">
+              <li>1 long form + 3 short-form videos per month</li>
+              <li>Strategy calls included</li>
+              <li>Thumbnail design</li>
+              <li>Light Analytics review</li>
+            </ul>
+          </div>
+
+          <div class="service-card reveal-up delay-2">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z"/><path d="M9 9h6M9 13h4"/></svg>
+            </div>
+            <h3 class="service-title">Short-Form Content</h3>
+            <p class="service-desc">Reels, TikToks, and YouTube Shorts optimised for the algorithm. Fast hooks, sharp cuts, and maximum retention.</p>
+            <div class="service-price">
+              <span class="price-label">Starting at</span>
+              <span class="price-value">$15-35</span>
+            </div>
+            <ul class="service-features">
+              <li>10-15 clips per package</li>
+              <li>Caption &amp; sound design</li>
+              <li>Platform-optimised exports</li>
+              <li>Same-day or 1 day turnaround</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats" aria-label="Statistics">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item reveal-up">
+            <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+            <p class="stat-label">Projects Completed</p>
+          </div>
+          <div class="stat-item reveal-up delay-1">
+            <span class="stat-number" data-target="2">0</span><span class="stat-suffix">M+</span>
+            <p class="stat-label">Total Views Generated</p>
+          </div>
+          <div class="stat-item reveal-up delay-2">
+            <span class="stat-number" data-target="40">0</span><span class="stat-suffix">+</span>
+            <p class="stat-label">Happy Clients</p>
+          </div>
+          <div class="stat-item reveal-up delay-3">
+            <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
+            <p class="stat-label">Years Experience</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" aria-label="Testimonials">
+      <div class="container">
+        <div class="section-label reveal-up">04 / Reviews</div>
+        <h2 class="section-title centered reveal-up">Client Voices</h2>
+
+        <div class="testimonial-track-wrap" aria-label="Testimonials carousel">
+          <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Previous testimonial">&#8592;</button>
+          <div class="testimonial-track-outer">
+            <div class="testimonial-track" id="testimonial-track" role="list">
+              <div class="testimonial-card" role="listitem">
+                <div class="testimonial-stars" aria-label="5 stars">★★★★</div>
+                <blockquote class="testimonial-quote">
+                  “Honestly one of the smoothest editors I’ve worked with. The pacing, effects, and overall flow always come out clean without feeling overdone. Every project felt way more professional after he touched it.”
+                </blockquote>
+                <div class="testimonial-author">
+                  <div class="author-avatar"><span>C1</span></div>
+                  <div>
+                    <p class="author-name">Jayden Miller</p>
+                    <p class="author-role">Content Creator</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-card" role="listitem">
+                <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+                <blockquote class="testimonial-quote">
+                  “Super easy to work with and always understood the vision straight away. The edits looked cinematic but still natural, which is hard to find. Definitely someone I’d work with again.”
+                </blockquote>
+                <div class="testimonial-author">
+                  <div class="author-avatar"><span>C2</span></div>
+                  <div>
+                    <p class="author-name">Ethan Brooks</p>
+                    <p class="author-role">YouTuber, 1,000+ Subscribers</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-card" role="listitem">
+                <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+                <blockquote class="testimonial-quote">
+                  “The quality genuinely surprised me the first time I worked with him. Attention to detail is crazy and the transitions/sound design always make the videos hit harder.”
+                </blockquote>
+                <div class="testimonial-author">
+                  <div class="author-avatar"><span>C3</span></div>
+                  <div>
+                    <p class="author-name">Marcus Reed</p>
+                    <p class="author-role">Video Editor</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-card" role="listitem">
+                <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+                <blockquote class="testimonial-quote">
+                  “One of the few editors I’ve seen who knows how to make content feel clean and engaging without trying too hard. Fast turnaround, good communication, and solid work every time.”
+                </blockquote>
+                <div class="testimonial-author">
+                  <div class="author-avatar"><span>C4</span></div>
+                  <div>
+                    <p class="author-name">Alex Carter</p>
+                    <p class="author-role">Influencer, 10K Followers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-btn carousel-next" id="carousel-next" aria-label="Next testimonial">&#8594;</button>
+        </div>
+
+        <div class="carousel-dots" id="carousel-dots" aria-label="Testimonial navigation" role="tablist"></div>
+      </div>
+    </section>
+
+    <section id="contact" aria-label="Contact">
+      <div class="container">
+        <div class="section-label reveal-up">05 / Contact</div>
+        <h2 class="section-title centered reveal-up">Let's Create Together</h2>
+        <p class="section-subtitle reveal-up">Have a project in mind? I'd love to hear about it. Send a message and I'll get back within 48 hours.</p>
+
+        <div class="contact-grid">
+          <div class="contact-form-wrap reveal-left">
+            <form action="https://formspree.io/f/xqenbjar" method="POST" class="contact-form" id="contact-form">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Leo Martin" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="hello@example.com" required />
+              </div>
+              <div class="form-group">
+                <label for="project">Project Type</label>
+                <select id="project" name="project">
+                  <option value="">Select a service...</option>
+                  <option value="long-form">Long-Form Video Editing</option>
+                  <option value="short-form">Short-Form Content</option>
+                  <option value="package">Full Content Package</option>
+                  <option value="other">Other / Let's Talk</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+              </div>
+              <input type="text" name="_gotcha" style="display:none">
+              <button type="submit" class="btn btn-gold full-width">Send Message</button>
+            </form>
+          </div>
+
+          <div class="contact-info reveal-right">
+            <h3 class="contact-info-title">Prefer direct contact?</h3>
+            <div class="contact-links">
+              <a href="mailto:gabrieleltrimoerasmus@gmail.com" class="contact-link-item">
+                <div class="contact-link-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <p class="contact-link-label">Email</p>
+                  <p class="contact-link-value">gabrieleltrimoerasmus@gmail.com</p>
+                </div>
+              </a>
+
+              <a href="#" class="contact-link-item" target="_blank" rel="noopener">
+                <div class="contact-link-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.5 19.5 0 0015.2 3c-.2.4-.5.9-.7 1.3a18 18 0 00-5 0A13.3 13.3 0 008.8 3 19.6 19.6 0 003.6 4.4C.5 9.1-.3 13.6.1 18a19.7 19.7 0 005.9 3 14 14 0 001.2-2 12.7 12.7 0 01-1.9-.9l.5-.4a14.1 14.1 0 0012.4 0l.5.4c-.6.4-1.2.6-1.9.9.3.7.8 1.4 1.2 2a19.6 19.6 0 005.9-3c.5-5.1-.8-9.5-3.5-13.6zM8.1 15.2c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3c1.1 0 2 1 2 2.3 0 1.3-.9 2.3-2 2.3zm7.8 0c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3c1.1 0 2 1 2 2.3 0 1.3-.9 2.3-2 2.3z"/></svg>
+                </div>
+                <div>
+                  <p class="contact-link-label">Discord</p>
+                  <p class="contact-link-value">@txnzee0125</p>
+                </div>
+              </a>
+
+              <a href="#" class="contact-link-item" target="_blank" rel="noopener">
+                <div class="contact-link-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                </div>
+                <div>
+                  <p class="contact-link-label">Instagram</p>
+                  <p class="contact-link-value">@txnzee.amv</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="availability-badge">
+              <span class="availability-dot" aria-hidden="true"></span>
+              <span>Currently accepting new clients</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#hero" class="footer-logo">LUMINAL</a>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/txnzee.amv?igsh=MWt4YnRqMmdcnBdA==" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@txnzee?_r=1&_t=ZS-967GZugouUW" class="footer-social-link" aria-label="TikTok" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.24 8.24 0 004.82 1.55V6.79a4.85 4.85 0 01-1.05-.1z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCj78QEDv6ELGu_WoY1_MMHw" class="footer-social-link" aria-label="YouTube" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7s-.3-2-1.2-2.8c-1.1-1.2-2.4-1.2-3-1.3C16.2 2.8 12 2.8 12 2.8s-4.2 0-6.8.1c-.6.1-1.9.1-3 1.3C1.3 5 1 7 1 7S.7 9.2.7 11.5v2.1C.7 16 1 18 1 18s.3 2 1.2 2.8c1.1 1.2 2.6 1.1 3.3 1.2C7.6 22.1 12 22.1 12 22.1s4.2 0 6.8-.2c.6-.1 1.9-.1 3-1.2.9-.8 1.2-2.8 1.2-2.8s.3-2.2.3-4.4v-2.1C23.3 9.2 23 7 23 7zM10.2 15.9V8.1l8.1 3.9-8.1 3.9z"/></svg>
+          </a>
+        </div>
+        <p class="footer-copy">&copy; <span id="footer-year"></span> txnzee. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-panel">
+      <button class="modal-close" id="modal-close" aria-label="Close project">&times;</button>
+      
+      <div class="modal-thumb">
+        <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+          <iframe id="modal-video" 
+                  src="" 
+                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <p class="modal-tags" id="modal-tags"></p>
+        <h2 class="modal-title" id="modal-title"></h2>
+        <p class="modal-desc" id="modal-desc"></p>
+        <a href="#" class="btn btn-gold" id="modal-link" target="_blank" rel="noopener">View Full Project ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
